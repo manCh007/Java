@@ -1,7 +1,8 @@
 # Java
 
 This repository holds everything with Java List is mentioned below,
-1. With Spring Boot: 
+
+## With Spring Boot: 
 	-> Spring Boot Starter rest : Basic of Spring Boot (how to create REST endpoint)
 	-> Inter Api Calls : How to call one endpoint from a service 
 		$ RestTemplate
