@@ -1,0 +1,14 @@
+spring:
+  cloud:
+    discovery:
+      enabled: true
+    gateway:
+      routes:
+      - id: student
+        uri: lb://student-service
+        predicates:
+        - Path=/student/**
+      - id: teacher
+        uri: lb://teacher-service
+        predicates:
+        - Path=/teacher/**
