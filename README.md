@@ -28,3 +28,12 @@ This repository holds everything with Java List is mentioned below,
 
 ## Data Structure:
 	-> Arrays:
+		$ Array function : 
+			1. Sorting Algorithms - a. Bubble sort, b. Selection sort, c. Insertion sort, d. Merge sort, e. Quick sort
+			2. Searching Algorithms - a. Linear search, b. Binary search
+		$ Array Special Questions :
+			1. Find Duplicates
+			2. Find if Fibonacci
+		$ 2D Arrays : How to create a read
+	-> Linked List : 
+		
