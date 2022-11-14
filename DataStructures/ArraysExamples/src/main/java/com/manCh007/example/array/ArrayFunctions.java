@@ -27,7 +27,39 @@ public class ArrayFunctions {
 			System.out.print(element);
 		}
 		System.out.println();
+		
+		// Search array
+		System.out.println("Position of the element : "+linearSearch(arr, 4));
+		System.out.println("Position of the element : "+binarySearch(arr, 4));
 
+	}
+	
+	// Divides the array from middle and searches both part for the element
+	// Complexity : O(logn)
+	
+	private static int binarySearch(int[] arr, int i) {
+		return searchPosition(arr, 0, arr.length-1, i);
+	}
+	
+	private static int searchPosition(int[] arr, int l, int h, int i) {
+		int middle = (l+h)/2;
+		if(arr[middle]==i)
+			return middle;
+		searchPosition(arr, l, middle-1, i);
+		searchPosition(arr, middle+1, h, i);
+		return -1;
+	}
+	
+	//Searches in a linear fashion for the element 
+	//Complexity : O(n)
+
+	private static int linearSearch(int[] arr, int x) {
+		for(int i=0; i<arr.length; i++) {
+			if(arr[i]==x)
+				return i;
+		}
+		return -1;
+		
 	}
 	
 	// Take a pivot from left to right find the number bigger than pivot and from right 
