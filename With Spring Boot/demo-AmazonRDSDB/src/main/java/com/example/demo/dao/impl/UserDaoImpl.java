@@ -29,9 +29,9 @@ public class UserDaoImpl implements UserDao {
 	public UserDetailsVO saveUser(UserDetailsVO user) {
 		String userInserSQL = "Insert into User_Tbl(firstName, lastName, email) values(:fname, :lname, :email)";
 		MapSqlParameterSource map = new MapSqlParameterSource();
-		map.addValue("fname", user.getFirstName());
-		map.addValue("lname", user.getLastName());
-		map.addValue("email", user.getUserEmail());
+		map.addValue("fname", user.getFname());
+		map.addValue("lname", user.getLname());
+		map.addValue("email", user.getEmail());
 		jdbcTemplate.execute(userInserSQL, map, new PreparedStatementCallback<>() {
             public Object doInPreparedStatement(PreparedStatement ps) throws SQLException, DataAccessException {
                 return ps.executeUpdate();

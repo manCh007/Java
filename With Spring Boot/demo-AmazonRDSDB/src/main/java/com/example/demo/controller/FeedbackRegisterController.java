@@ -26,8 +26,9 @@ public class FeedbackRegisterController {
 	
 	@PostMapping(value = "/feedback")
 	public UserDetailsVO userFeedback(@RequestBody RegistrationVO registerationDetails) {
+		System.out.println("Request: "+registerationDetails.toString());
 		UserDetailsVO user = registerationDetails.getUser();
-		FeedbackVO feedback = new FeedbackVO(user.getUserEmail(), registerationDetails.getFeedbackMsg());
+		FeedbackVO feedback = new FeedbackVO(user.getEmail(), registerationDetails.getFeedback());
 		feedbackService.saveFeedback(feedback);
 		// Call service method to trigger an webClient Call to 
 		// send email to registered user's email

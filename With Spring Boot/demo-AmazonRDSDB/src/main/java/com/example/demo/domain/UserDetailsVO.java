@@ -3,35 +3,43 @@ package com.example.demo.domain;
 
 public class UserDetailsVO {
 	
-	private String firstName;
-	private String lastName;
-	private String userEmail;
-	
-	public String getFirstName() {
-		return firstName;
+	private String fname;
+	private String lname;
+	private String email;
+	public String getFname() {
+		return fname;
 	}
-	public void setFirstName(String firstName) {
-		this.firstName = firstName;
+	public void setFname(String fname) {
+		this.fname = fname;
 	}
-	public String getLastName() {
-		return lastName;
+	public String getLname() {
+		return lname;
 	}
-	public void setLastName(String lastName) {
-		this.lastName = lastName;
+	public void setLname(String lname) {
+		this.lname = lname;
 	}
-	public String getUserEmail() {
-		return userEmail;
+	public String getEmail() {
+		return email;
 	}
-	public void setUserEmail(String userEmail) {
-		this.userEmail = userEmail;
+	public void setEmail(String email) {
+		this.email = email;
 	}
-	public UserDetailsVO(String firstName, String lastName, String userEmail) {
+	public UserDetailsVO(String fname, String lname, String email) {
 		super();
-		this.firstName = firstName;
-		this.lastName = lastName;
-		this.userEmail = userEmail;
+		this.fname = fname;
+		this.lname = lname;
+		this.email = email;
 	}
 	public UserDetailsVO() {
-		
+		super();
+		// TODO Auto-generated constructor stub
 	}
+	@Override
+	public String toString() {
+		return "UserDetailsVO [fname=" + fname + ", lname=" + lname + ", email=" + email + "]";
+	}
+	
+	
+	
+	
 }
